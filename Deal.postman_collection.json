@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "798313d7-ae35-4fae-a595-fc68f7852161",
+		"name": "Deal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31154861"
+	},
+	"item": [
+		{
+			"name": "Upload deal file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/rossl/OneDrive/Área de Trabalho/deals_precargados.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/deal/uploadDealFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deal",
+						"uploadDealFile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/rossl/OneDrive/Área de Trabalho/deals_precargados.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/deal/uploadDealFile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deal",
+								"uploadDealFile"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-n1aZHvKQsXCZRm7SaL88i3Svtzg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Apr 2025 04:07:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "File uploaded successfully"
+				}
+			]
+		},
+		{
+			"name": "Get deal commision",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/deal/D0002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deal",
+						"D0002"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deal/D0002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deal",
+								"D0002"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-QBuqH7pVUPPRat1vxqanPWOE52M\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Apr 2025 04:07:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"commission\": 816.90435\n}"
+				}
+			]
+		},
+		{
+			"name": "Get representative monthly commision",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/deal/representative/Alice Smith?month=2023-08-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deal",
+						"representative",
+						"Alice Smith"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "2023-08-06"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deal/representative/Alice Smith?month=2023-08-06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deal",
+								"representative",
+								"Alice Smith"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "2023-08-06"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "19"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13-ByiR8/JBLLrZIBpneEwOyLkTPcM\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Apr 2025 04:07:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deals\": 816.90435\n}"
+				}
+			]
+		},
+		{
+			"name": "Get monthly commision",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/deal/month-total/2023-08",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deal",
+						"month-total",
+						"2023-08"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deal/month-total/2023-08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deal",
+								"month-total",
+								"2023-08"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "19"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13-kErEXqxziCwLHz7fCihBpmKw2iY\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Apr 2025 04:07:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deals\": 2413.9729\n}"
+				}
+			]
+		}
+	]
+}
